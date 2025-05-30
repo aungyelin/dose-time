@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+import "theme_config.proto";
+
+option java_package = "dev.yelinaung.dosetime.core.datastore";
+option java_multiple_files = true;
+
+message UserPreferences {
+    bool finished_onboarding = 1;
+    ThemeConfigProto theme_config = 2;
+}

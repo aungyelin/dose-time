@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="feature_onboarding_greeting">welcome to</string>
+
+    <string name="feature_onboarding_button_get_started">Get Started</string>
+</resources>
