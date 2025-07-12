@@ -25,15 +25,7 @@ fun RootNavHost(
     ) {
 
         onboardingSection(
-            onClickGetStarted = {
-                navController.navigateToMain {
-                    popUpTo(navController.graph.findStartDestination().id) {
-                        inclusive = true
-                    }
-                    launchSingleTop = true
-                    restoreState = false
-                }
-            }
+            onClickGetStarted = { navController.navigateToMain() }
         ) {  }
 
         mainScreen()

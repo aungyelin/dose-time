@@ -1,6 +1,5 @@
 package dev.yelinaung.dosetime.core.datastore
 
-import android.util.Log
 import androidx.datastore.core.DataStore
 import dev.yelinaung.dosetime.core.model.ThemeConfig
 import dev.yelinaung.dosetime.core.model.UserData

@@ -37,6 +37,7 @@ android {
 dependencies {
 
     implementation(projects.core.common)
+    implementation(projects.core.ui)
     implementation(projects.core.designsystem)
     implementation(projects.core.domain)
     implementation(projects.core.data)
@@ -45,7 +46,8 @@ dependencies {
     implementation(projects.feature.onboarding)
     implementation(projects.feature.main)
     implementation(projects.feature.home)
-    implementation(projects.feature.history)
+    implementation(projects.feature.medications)
+    implementation(projects.feature.details)
     implementation(projects.feature.addmed)
 
     implementation(libs.androidx.core.splashscreen)
@@ -53,16 +55,8 @@ dependencies {
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.lifecycle.runtime.ktx)
 
-    // Navigation
     implementation(libs.androidx.navigation.compose)
     androidTestImplementation(libs.androidx.navigation.testing)
-
-    // Room
-//    implementation(libs.androidx.room.runtime)
-//    ksp(libs.androidx.room.compiler)
-//    implementation(libs.androidx.room.ktx)
-//    implementation(libs.androidx.room.paging)
-//    testImplementation(libs.androidx.room.testing)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

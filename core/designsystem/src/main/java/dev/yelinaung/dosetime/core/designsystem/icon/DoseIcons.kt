@@ -3,11 +3,14 @@ package dev.yelinaung.dosetime.core.designsystem.icon
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.ArrowBack
 import androidx.compose.material.icons.automirrored.rounded.ShortText
-import androidx.compose.material.icons.filled.CalendarMonth
+import androidx.compose.material.icons.filled.Medication
+import androidx.compose.material.icons.filled.MoreHoriz
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.material.icons.outlined.Bookmarks
-import androidx.compose.material.icons.outlined.CalendarMonth
+import androidx.compose.material.icons.outlined.ChevronRight
 import androidx.compose.material.icons.outlined.Home
+import androidx.compose.material.icons.outlined.Medication
+import androidx.compose.material.icons.outlined.MoreHoriz
 import androidx.compose.material.icons.outlined.Upcoming
 import androidx.compose.material.icons.rounded.Add
 import androidx.compose.material.icons.rounded.Bookmark
@@ -22,17 +25,19 @@ import androidx.compose.material.icons.rounded.Search
 import androidx.compose.material.icons.rounded.Settings
 import androidx.compose.material.icons.rounded.Upcoming
 import androidx.compose.material.icons.rounded.ViewDay
-import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.tooling.preview.Preview
 
 object DoseIcons {
     val Home = Icons.Rounded.Home
     val HomeOutlined = Icons.Outlined.Home
-    val History = Icons.Filled.CalendarMonth
-    val HistoryOutlined = Icons.Outlined.CalendarMonth
+    val Medications = Icons.Filled.Medication
+    val MedicationsOutlined = Icons.Outlined.Medication
+    val More = Icons.Filled.MoreHoriz
+    val MoreOutlined = Icons.Outlined.MoreHoriz
+
+    val RightArrow = Icons.Outlined.ChevronRight
+    val BackArrow = Icons.AutoMirrored.Rounded.ArrowBack
 
     val Add = Icons.Rounded.Add
-    val ArrowBack = Icons.AutoMirrored.Rounded.ArrowBack
     val Bookmark = Icons.Rounded.Bookmark
     val BookmarkBorder = Icons.Rounded.BookmarkBorder
     val Bookmarks = Icons.Rounded.Bookmarks

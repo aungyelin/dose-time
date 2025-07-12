@@ -9,7 +9,8 @@ android {
 dependencies {
 
     implementation(projects.feature.home)
-    implementation(projects.feature.history)
+    implementation(projects.feature.medications)
+    implementation(projects.feature.details)
     implementation(projects.feature.addmed)
 
 }

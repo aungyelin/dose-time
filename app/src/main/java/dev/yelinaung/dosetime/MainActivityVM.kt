@@ -3,7 +3,7 @@ package dev.yelinaung.dosetime
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
-import dev.yelinaung.dosetime.core.domain.repository.UserDataRepository
+import dev.yelinaung.dosetime.core.domain.usecase.GetUserDataUseCase
 import dev.yelinaung.dosetime.core.model.UserData
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
@@ -13,10 +13,10 @@ import javax.inject.Inject
 
 @HiltViewModel
 class MainActivityVM @Inject constructor(
-    userDataRepository: UserDataRepository,
+    getUserDataUseCase: GetUserDataUseCase
 ) : ViewModel() {
 
-    val uiState: StateFlow<MainActivityUiState> = userDataRepository.userData.map {
+    val uiState: StateFlow<MainActivityUiState> = getUserDataUseCase.invoke().map {
         MainActivityUiState.Success(it)
     }.stateIn(
         scope = viewModelScope,

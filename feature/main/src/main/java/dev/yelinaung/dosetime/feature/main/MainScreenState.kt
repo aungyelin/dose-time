@@ -12,8 +12,8 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navOptions
 import dev.yelinaung.dosetime.feature.main.navigation.TabLevelDestination
-import dev.yelinaung.dosetime.feature.main.navigation.navigateToHistoryTab
 import dev.yelinaung.dosetime.feature.main.navigation.navigateToHomeTab
+import dev.yelinaung.dosetime.feature.main.navigation.navigateToMedicationsTab
 
 @Composable
 fun rememberMainScreenState(
@@ -30,9 +30,9 @@ fun rememberMainScreenState(
 
 @Stable
 class MainScreenState(
-    val mainNavController: NavHostController
+    val mainNavController: NavHostController,
 ) {
-    val tabLevelDestinations: List<TabLevelDestination> = TabLevelDestination.entries
+    val tabLevelDestinations = TabLevelDestination.entries
 
     private val previousDestination = mutableStateOf<NavDestination?>(null)
 
@@ -58,7 +58,7 @@ class MainScreenState(
 
     fun navigateToTabLevelDestination(tapLevelDestination: TabLevelDestination) {
 
-        val topLevelNavOptions = navOptions {
+        val nOptions = navOptions {
             // Pop up to the start destination of the graph to
             // avoid building up a large stack of destinations
             // on the back stack as users select items
@@ -75,8 +75,8 @@ class MainScreenState(
         }
 
         when (tapLevelDestination) {
-            TabLevelDestination.HOME -> mainNavController.navigateToHomeTab(topLevelNavOptions)
-            TabLevelDestination.HISTORY -> mainNavController.navigateToHistoryTab(topLevelNavOptions)
+            TabLevelDestination.HOME -> mainNavController.navigateToHomeTab(nOptions)
+            TabLevelDestination.Medications -> mainNavController.navigateToMedicationsTab(nOptions)
         }
 
     }

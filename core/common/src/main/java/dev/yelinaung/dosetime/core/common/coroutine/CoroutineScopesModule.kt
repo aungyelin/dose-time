@@ -10,10 +10,6 @@ import kotlinx.coroutines.SupervisorJob
 import javax.inject.Qualifier
 import javax.inject.Singleton
 
-@Retention(AnnotationRetention.RUNTIME)
-@Qualifier
-annotation class DoseCoroutineScope
-
 @Module
 @InstallIn(SingletonComponent::class)
 internal object CoroutineScopesModule {

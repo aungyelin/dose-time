@@ -15,10 +15,8 @@ fun NavController.navigateToHome(navOptions: NavOptions) {
     navigate(route = HomeRoute, navOptions = navOptions)
 }
 
-fun NavGraphBuilder.homeScreen(
-    onClickAddMed: (str: String) -> Unit
-) {
+fun NavGraphBuilder.homeScreen() {
     composable<HomeRoute> {
-        HomeScreen(onClickAddMed)
+        HomeScreen()
     }
 }

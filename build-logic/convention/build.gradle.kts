@@ -18,6 +18,7 @@ kotlin {
 }
 
 dependencies {
+    implementation(libs.room.gradlePlugin)
     compileOnly(libs.android.gradlePlugin)
 //    compileOnly(libs.android.tools.common)
     compileOnly(libs.kotlin.gradlePlugin)
@@ -63,6 +64,10 @@ gradlePlugin {
         register("kotlinSerialization") {
             id = libs.plugins.dosetime.kotlin.serialization.get().pluginId
             implementationClass = "KotlinSerializationConventionPlugin"
+        }
+        register("androidRoom") {
+            id = libs.plugins.dosetime.android.room.get().pluginId
+            implementationClass = "AndroidRoomConventionPlugin"
         }
     }
 }

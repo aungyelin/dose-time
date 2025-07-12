@@ -1,9 +1,7 @@
 package dev.yelinaung.dosetime.feature.main.navigation
 
 import androidx.navigation.NavController
-import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavOptions
-import androidx.navigation.compose.composable
 import kotlinx.serialization.Serializable
 
 @Serializable
@@ -14,8 +12,8 @@ fun NavController.navigateToHomeTab(navOptions: NavOptions) {
 }
 
 @Serializable
-data object HistoryTabRoute
+data object MedicationsTabRoute
 
-fun NavController.navigateToHistoryTab(navOptions: NavOptions) {
-    navigate(route = HistoryTabRoute, navOptions)
+fun NavController.navigateToMedicationsTab(navOptions: NavOptions) {
+    navigate(route = MedicationsTabRoute, navOptions)
 }
